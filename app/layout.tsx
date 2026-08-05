@@ -3,9 +3,9 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Aegis North | Cybersecurity for what is next',
+  title: 'Cyrus Technologies | Cybersecurity for what is next',
   description: 'Independent cyber defense for ambitious teams. Managed detection, cloud security, testing, compliance, and response.',
-  generator: 'Aegis North',
+  generator: 'Cyrus Technologies',
 }
 
 export const viewport: Viewport = {

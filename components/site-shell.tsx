@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { ArrowUpRight, ChevronDown, Menu, ShieldCheck, X } from 'lucide-react'
+import { ArrowUpRight, CircuitBoard, Menu, X } from 'lucide-react'
 
 export const serviceLinks = [
   { slug: 'managed-detection-response', label: 'Managed Detection & Response' },
@@ -20,12 +20,13 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="brand-mark" onClick={() => setOpen(false)}>
-          <span className="brand-icon"><ShieldCheck size={19} strokeWidth={2.4} /></span>
-          <span>Aegis <em>North</em></span>
+          <span className="brand-icon" aria-hidden="true"><CircuitBoard size={18} strokeWidth={2.2} /><b>CT</b></span>
+          <span>Cyrus <em>Technologies</em></span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
+          <Link href="/#about" className="nav-link">About us</Link>
           <Link href="/#services" className="nav-link">Services</Link>
-          <Link href="/#why-us" className="nav-link">Why Aegis North</Link>
+          <Link href="/#why-us" className="nav-link">Why Cyrus</Link>
           <Link href="/#approach" className="nav-link">Our approach</Link>
           <Link href="/#contact" className="nav-link">Insights</Link>
         </nav>
@@ -36,8 +37,9 @@ export function SiteHeader() {
       </div>
       {open && (
         <div className="mobile-menu md:hidden">
+          <Link href="/#about" onClick={() => setOpen(false)}>About us</Link>
           <Link href="/#services" onClick={() => setOpen(false)}>Services</Link>
-          <Link href="/#why-us" onClick={() => setOpen(false)}>Why Aegis North</Link>
+          <Link href="/#why-us" onClick={() => setOpen(false)}>Why Cyrus</Link>
           <Link href="/#approach" onClick={() => setOpen(false)}>Our approach</Link>
           <Link href="/#contact" onClick={() => setOpen(false)}>Contact</Link>
         </div>
@@ -50,12 +52,12 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="container grid gap-12 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
-        <div><Link href="/" className="brand-mark brand-mark-light"><span className="brand-icon"><ShieldCheck size={19} /></span><span>Aegis <em>North</em></span></Link><p className="footer-copy">Security that moves at the speed of your business. Built for the moments you cannot afford to miss.</p></div>
-        <div><p className="footer-label">Explore</p><div className="footer-links"><Link href="/#why-us">Why us</Link><Link href="/#services">Services</Link><Link href="/#approach">Approach</Link><Link href="/#contact">Contact</Link></div></div>
+        <div><Link href="/" className="brand-mark brand-mark-light"><span className="brand-icon" aria-hidden="true"><CircuitBoard size={18} /><b>CT</b></span><span>Cyrus <em>Technologies</em></span></Link><p className="footer-copy">Security that moves at the speed of your business. Built for the moments you cannot afford to miss.</p></div>
+        <div><p className="footer-label">Explore</p><div className="footer-links"><Link href="/#about">About us</Link><Link href="/#why-us">Why us</Link><Link href="/#services">Services</Link><Link href="/#contact">Contact</Link></div></div>
         <div><p className="footer-label">Services</p><div className="footer-links">{serviceLinks.slice(0, 4).map((service) => <Link key={service.slug} href={`/services/${service.slug}`}>{service.label}</Link>)}</div></div>
-        <div><p className="footer-label">Reach us</p><div className="footer-links"><a href="mailto:hello@aegisnorth.com">hello@aegisnorth.com</a><a href="tel:+18005550148">+1 800 555 0148</a><span>New York · London · Singapore</span></div></div>
+        <div><p className="footer-label">Reach us</p><div className="footer-links"><a href="mailto:hello@cyrustechnologies.com">hello@cyrustechnologies.com</a><a href="tel:+18005550148">+1 800 555 0148</a><span>New York · London · Singapore</span></div></div>
       </div>
-      <div className="container flex flex-col gap-3 border-t border-white/15 py-5 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between"><span>© 2026 Aegis North Security.</span><span>Privacy · Terms · Responsible disclosure</span></div>
+      <div className="container flex flex-col gap-3 border-t border-white/15 py-5 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between"><span>© 2026 Cyrus Technologies.</span><span>Privacy · Terms · Responsible disclosure</span></div>
     </footer>
   )
 }
