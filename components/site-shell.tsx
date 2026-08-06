@@ -20,7 +20,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="brand-mark" onClick={() => setOpen(false)}>
-          <img className="brand-logo" src="/logo-cyrus.png?v=4" alt="Cyrus Technologies" />
+          <span className="brand-wordmark" aria-label="Cyrus Technologies"><strong>C<span>Y</span>RUS</strong><small>TECHNOLOGIES</small></span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
           <Link href="/#about" className="nav-link">About us</Link>
@@ -51,7 +51,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="container grid gap-12 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
-        <div><Link href="/" className="brand-mark brand-mark-light"><img className="brand-logo footer-logo" src="/logo-cyrus.png?v=4" alt="Cyrus Technologies" /></Link><p className="footer-copy">Security that moves at the speed of your business. Built for the moments you cannot afford to miss.</p></div>
+        <div><Link href="/" className="brand-mark brand-mark-light"><span className="brand-wordmark" aria-label="Cyrus Technologies"><strong>C<span>Y</span>RUS</strong><small>TECHNOLOGIES</small></span></Link><p className="footer-copy">Security that moves at the speed of your business. Built for the moments you cannot afford to miss.</p></div>
         <div><p className="footer-label">Explore</p><div className="footer-links"><Link href="/#about">About us</Link><Link href="/#why-us">Why us</Link><Link href="/#services">Services</Link><Link href="/#contact">Contact</Link></div></div>
         <div><p className="footer-label">Services</p><div className="footer-links">{serviceLinks.slice(0, 4).map((service) => <Link key={service.slug} href={`/services/${service.slug}`}>{service.label}</Link>)}</div></div>
         <div><p className="footer-label">Reach us</p><div className="footer-links"><a href="mailto:hello@cyrustechnologies.com">hello@cyrustechnologies.com</a><a href="tel:+18005550148">+1 800 555 0148</a><span>New York · London · Singapore</span></div></div>

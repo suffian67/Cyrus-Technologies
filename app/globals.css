@@ -3,7 +3,7 @@
 @import 'shadcn/tailwind.css';
 
 @theme inline {
-  --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground); --color-border: var(--border); --color-ring: var(--ring); --font-sans: 'Inter', 'Arial', sans-serif; --font-mono: 'IBM Plex Mono', monospace; --radius-lg: 1rem; --radius-xl: 1.5rem;
+  --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground); --color-border: var(--border); --color-ring: var(--ring); --font-sans: 'Inter', 'Arial', sans-serif; --font-display: 'Space Grotesk', 'Arial', sans-serif; --font-mono: 'IBM Plex Mono', monospace; --radius-lg: 1rem; --radius-xl: 1.5rem;
 }
 
 :root { color-scheme: light; --background: #ffffff; --foreground: #0a1939; --card: #ffffff; --card-foreground: #0a1939; --primary: #0d59d8; --primary-foreground: #ffffff; --muted: #eef6ff; --muted-foreground: #5c6b84; --border: #dce8f5; --ring: #0d59d8; --navy: #061b45; --blue: #1769e8; --sky: #eaf5ff; --ink-soft: #46617f; --line: #d9e7f4; --radius: 0.85rem; }
@@ -14,8 +14,7 @@ a { color: inherit; text-decoration: none; }
 .container { width: min(1140px, calc(100% - 40px)); margin-inline: auto; }
 .site-header { position: relative; z-index: 20; background: #fff; border-bottom: 1px solid var(--line); }
 .brand-mark { display: inline-flex; align-items: center; color: var(--navy); font-weight: 800; }
-.brand-logo { display: block; width: 196px; height: 44px; object-fit: contain; object-position: center; mix-blend-mode: multiply; }.brand-mark-light { padding: 7px 10px; border-radius: 8px; background: #fff; }
-.footer-logo { width: 220px; height: 50px; }
+.brand-wordmark { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; color: #070b1b; }.brand-wordmark strong { font: 900 1.55rem/.8 'Space Grotesk', Arial, sans-serif; letter-spacing: -.11em; }.brand-wordmark strong span { color: var(--blue); }.brand-wordmark small { color: var(--blue); font: 800 .36rem/1 'IBM Plex Mono', monospace; letter-spacing: .28em; }.brand-mark-light { padding: 9px 12px; border-radius: 8px; background: #fff; }.brand-wordmark-large strong { font-size: clamp(3rem, 8vw, 5.5rem); }.brand-wordmark-large small { font-size: .7rem; }.footer-logo { width: 220px; height: 45px; }
 .brand-icon { display: none; }
 .nav-link { color: #5f6d82; font-size: .77rem; font-weight: 700; transition: color .2s ease; }
 .nav-link:hover { color: var(--blue); }
@@ -35,7 +34,7 @@ a { color: inherit; text-decoration: none; }
 .eyebrow-light { color: #8dc7ff; }
 .eyebrow-dot { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: #63dbad; box-shadow: 0 0 0 5px #63dbad22; }
 .hero-copy { max-width: 600px; }
-.hero-copy h1, .service-hero h1 { margin: 0; max-width: 680px; font-size: clamp(3.3rem, 8vw, 6.2rem); line-height: .95; letter-spacing: -.075em; font-weight: 800; }
+.hero-copy h1, .service-hero h1 { margin: 0; max-width: 680px; font-family: var(--font-display), Arial, sans-serif; font-size: clamp(3.3rem, 8vw, 6.2rem); line-height: .92; letter-spacing: -.09em; font-weight: 650; }
 .hero-copy h1 span, h2 span, .service-hero h1 span { color: #56a9ff; }
 .hero-copy p { max-width: 445px; margin: 28px 0 30px; color: #c4daf7; font-size: 1rem; line-height: 1.7; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
