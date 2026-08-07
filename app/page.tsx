@@ -1,38 +1,27 @@
-import Link from 'next/link'
-import { Activity, ArrowDownRight, ArrowUpRight, Check, Cloud, Fingerprint, LockKeyhole, Radar, Shield, Sparkles, Timer, Users, Zap } from 'lucide-react'
 import { SiteFooter, SiteHeader } from '@/components/site-shell'
-import { AnimatedStat, Reveal } from '@/components/site-interactions'
-
-const services = [
-  { icon: Radar, title: 'Managed Detection & Response', text: 'Always-on threat hunting and human-led response for the signals that matter.', slug: 'managed-detection-response' },
-  { icon: Cloud, title: 'Cloud Security', text: 'Secure your cloud estate from first workload to full-scale transformation.', slug: 'cloud-security' },
-  { icon: Fingerprint, title: 'Identity & Access', text: 'Make every login, permission, and privileged action intentional.', slug: 'identity-access-management' },
-  { icon: Activity, title: 'Penetration Testing', text: 'Find the paths attackers will take before they get the chance.', slug: 'penetration-testing' },
-  { icon: LockKeyhole, title: 'Security Compliance', text: 'Turn requirements into a resilient operating advantage.', slug: 'security-compliance' },
-  { icon: Timer, title: 'Incident Response', text: 'A calm, expert response when the unexpected becomes urgent.', slug: 'incident-response' },
-]
-
-const reasons = ['Security leaders who speak your language', 'A clear view across every environment', 'Actions prioritized by business impact', 'Built to get better every single day']
+import { AboutSection } from '@/components/home/about-section'
+import { ApproachSection } from '@/components/home/approach-section'
+import { ContactSection } from '@/components/home/contact-section'
+import { HeroSection } from '@/components/home/hero-section'
+import { MetricsSection } from '@/components/home/metrics-section'
+import { QuoteSection } from '@/components/home/quote-section'
+import { ServicesSection } from '@/components/home/services-section'
+import { TrustStrip } from '@/components/home/trust-strip'
+import { WhyUsSection } from '@/components/home/why-us-section'
 
 export default function Page() {
   return (
     <main>
       <SiteHeader />
-      <section className="hero-section">
-        <div className="hero-grid" aria-hidden="true" />
-        <div className="container hero-content">
-          <Reveal><p className="eyebrow eyebrow-light"><span className="eyebrow-dot" /> Independent cyber defense for ambitious teams</p></Reveal>
-          <Reveal className="hero-copy"><h1>Stay ahead of<br /><span>what&apos;s next.</span></h1><p>Security is not a checkpoint. It&apos;s the confidence to keep building, moving, and making the decisions that shape your future.</p><div className="hero-actions"><Link href="#contact" className="button button-bright">Build your security posture <ArrowUpRight size={17} /></Link><Link href="#services" className="text-link text-link-light">Explore capabilities <ArrowDownRight size={16} /></Link></div></Reveal>
-          <div className="hero-orbit" aria-hidden="true"><div className="orbit-ring orbit-ring-one" /><div className="orbit-ring orbit-ring-two" /><div className="orbit-core"><Shield size={42} /></div><span className="orbit-tag orbit-tag-top">24/7 monitoring</span><span className="orbit-tag orbit-tag-bottom">Threat intelligence</span></div>
-        </div>
-      </section>
-      <section className="trust-strip"><div className="container flex flex-col gap-8 py-8 md:flex-row md:items-center md:justify-between"><div className="trust-intro"><span className="shield-badge"><Shield size={21} /></span><div><p>Trusted by teams with<br /><strong>something to protect.</strong></p></div></div><div className="stats-row"><AnimatedStat value={18} suffix="+" label="Years in defense" /><AnimatedStat value={99} suffix="%" label="Detection coverage" /><AnimatedStat value={3} suffix="m" label="Avg. response time" /></div></div></section>
-      <section className="section section-pale" id="why-us"><div className="container"><Reveal><div className="section-heading split-heading"><div><p className="eyebrow">The Cyrus Technologies difference</p><h2>Security with<br /><span>signal, not noise.</span></h2></div><p className="section-lead">Your team does not need more dashboards. It needs a partner who knows what to look for, what to do next, and why it matters.</p></div></Reveal><div className="reason-grid">{reasons.map((reason, index) => <Reveal key={reason} className="reason-card"><span className="reason-number">0{index + 1}</span><Check size={19} /><p>{reason}</p></Reveal>)}</div></div></section>
-      <section className="section" id="services"><div className="container"><Reveal><div className="section-heading centered-heading"><p className="eyebrow">What we do</p><h2>Practical protection for<br /><span>complex environments.</span></h2><p className="section-lead">From proactive defense to decisive response, we make cybersecurity a force multiplier.</p></div></Reveal><div className="service-grid">{services.map(({ icon: Icon, title, text, slug }, index) => <Reveal key={title} className={`service-card service-card-${index + 1}`}><div className="service-icon"><Icon size={23} /></div><span className="service-index">0{index + 1}</span><h3>{title}</h3><p>{text}</p><Link href={`/services/${slug}`} className="card-link" aria-label={`Explore ${title}`}>Explore <ArrowUpRight size={16} /></Link></Reveal>)}</div></div></section>
-      <section className="section about-section" id="about"><div className="container about-grid"><Reveal className="about-visual"><div className="about-logo-card"><div className="brand-wordmark brand-wordmark-large"><strong>C<span>Y</span>RUS</strong><small>TECHNOLOGIES</small></div></div><div className="about-stamp">Independent defense<br /><strong>Built for momentum.</strong></div></Reveal><Reveal><p className="eyebrow">About Cyrus Technologies</p><h2>Security expertise<br /><span>with a human edge.</span></h2><p className="section-lead">Cyrus Technologies helps ambitious organizations turn cybersecurity into a competitive advantage. We bring together seasoned operators, practical strategy, and technology that makes complex environments easier to understand.</p><p className="section-lead">From your first risk review to the moments that matter most, we stay close, communicate clearly, and keep your team moving forward with confidence.</p><Link href="#contact" className="text-link">Meet your security partner <ArrowUpRight size={16} /></Link></Reveal></div></section><section className="metrics-band"><div className="container metrics-inner"><Reveal><p className="eyebrow eyebrow-light">The numbers behind the calm</p><h2>Ready for the<br /><span>moment that matters.</span></h2><p className="metrics-copy">Preparedness is measurable. We help teams move from uncertainty to a security program they can trust.</p><Link href="#contact" className="button button-outline-light">See how we can help <ArrowUpRight size={16} /></Link></Reveal><div className="metrics-visual" aria-hidden="true"><div className="scan-card"><div className="scan-header"><span><span className="live-dot" /> LIVE DEFENSE GRID</span><span>AEGIS / 06</span></div><div className="scan-lines"><i /><i /><i /><i /><i /></div><div className="scan-footer"><span>Threat surface</span><strong>LOW</strong></div></div><Sparkles className="sparkle sparkle-a" size={18} /><Zap className="sparkle sparkle-b" size={22} /></div></div></section>
-      <section className="section section-pale" id="approach"><div className="container approach-grid"><Reveal><p className="eyebrow">An operating philosophy</p><h2>Good security<br /><span>feels human.</span></h2><p className="section-lead">We combine sharp technical expertise with the context, clarity, and care that lets people make better decisions under pressure.</p><Link href="#contact" className="text-link">Meet your security partner <ArrowUpRight size={16} /></Link></Reveal><Reveal className="approach-panel"><div className="approach-line"><span>01</span><div><h3>See the whole picture</h3><p>We connect the dots across people, process, and technology.</p></div></div><div className="approach-line"><span>02</span><div><h3>Prioritize what matters</h3><p>Every recommendation is tied to risk, revenue, or resilience.</p></div></div><div className="approach-line"><span>03</span><div><h3>Build for the next chapter</h3><p>Your program evolves as quickly as your ambition does.</p></div></div></Reveal></div></section>
-      <section className="quote-section"><div className="container quote-inner"><div className="quote-mark">“</div><blockquote>They gave us something more valuable than a clean audit: the confidence to move faster.</blockquote><div className="quote-person"><div className="avatar">MS</div><div><strong>Marina Shah</strong><span>VP of Technology, Northstar Health</span></div></div></div></section>
-      <section className="contact-section" id="contact"><div className="container contact-inner"><Reveal><p className="eyebrow">Start a conversation</p><h2>Let&apos;s make your<br /><span>next move safer.</span></h2><p>Tell us a little about what you&apos;re building, protecting, or preparing for. We&apos;ll bring the right people to the table.</p><Link href="mailto:hello@cyrustechnologies.com" className="button button-bright">hello@cyrustechnologies.com <ArrowUpRight size={17} /></Link></Reveal><Reveal className="contact-card"><div className="contact-card-icon"><Users size={22} /></div><h3>Not sure where to begin?</h3><p>Our 30-minute Security Signal Session is a no-pressure way to identify your biggest exposure and your best next step.</p><Link href="mailto:hello@cyrustechnologies.com?subject=Security%20Signal%20Session" className="card-link">Book a session <ArrowUpRight size={16} /></Link></Reveal></div></section>
+      <HeroSection />
+      <TrustStrip />
+      <WhyUsSection />
+      <ServicesSection />
+      <AboutSection />
+      <MetricsSection />
+      <ApproachSection />
+      <QuoteSection />
+      <ContactSection />
       <SiteFooter />
     </main>
   )
