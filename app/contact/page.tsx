@@ -1,0 +1,7 @@
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { CTASection } from '@/components/cta-section'
+import { Reveal } from '@/components/site-interactions'
+
+export const metadata = { title: 'Contact Cyrus Technologies', description: 'Talk with Cyrus Technologies about your cybersecurity priorities.' }
+export default function ContactPage() { return <main><Header /><section className="service-hero"><div className="container service-hero-content"><Reveal><p className="eyebrow eyebrow-light">Start a conversation</p><h1>Let&apos;s make your next move safer.</h1><p className="service-summary">Tell us what you are building, protecting, or preparing for. We will bring the right people to the table.</p></Reveal></div></section><section className="section"><div className="container contact-page-grid"><Reveal><p className="eyebrow">Reach Cyrus</p><h2>Let&apos;s talk<br /><span>about what matters.</span></h2></Reveal><Reveal className="detail-copy"><p>Send us a note and our team will follow up with a practical next step. No sales theatre, just a clear conversation about your security priorities.</p><a className="contact-detail" href="mailto:hello@cyrustechnologies.com">hello@cyrustechnologies.com</a><a className="contact-detail" href="tel:+18005550148">+1 800 555 0148</a><span className="contact-detail">New York · London · Singapore</span></Reveal></div></section><CTASection title={<>Build confidence<br /><span>before the moment.</span></>} /><Footer /></main> }

@@ -1,0 +1,7 @@
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { CTASection } from '@/components/cta-section'
+import { Reveal } from '@/components/site-interactions'
+
+export const metadata = { title: 'About Cyrus Technologies', description: 'Meet Cyrus Technologies, an independent cybersecurity partner for ambitious organizations.' }
+export default function AboutPage() { return <main><Header /><section className="service-hero"><div className="container service-hero-content"><Reveal><p className="eyebrow eyebrow-light">About Cyrus Technologies</p><h1>Security expertise with a human edge.</h1><p className="service-summary">We help ambitious organizations turn cybersecurity into a competitive advantage through practical strategy, seasoned operators, and technology that makes complex environments easier to understand.</p></Reveal></div></section><section className="section"><div className="container detail-grid"><Reveal><p className="eyebrow">Our point of view</p><h2>Make security<br /><span>move with you.</span></h2></Reveal><Reveal className="detail-copy"><p>Cyrus Technologies was built for teams that need more than alerts and audits. We work alongside your people to create durable security programs that support growth.</p><p>Our approach is direct, collaborative, and grounded in the moments that matter: before risk becomes an incident, and after the right decision creates momentum.</p></Reveal></div></section><CTASection /><Footer /></main> }

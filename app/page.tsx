@@ -1,4 +1,5 @@
-import { SiteFooter, SiteHeader } from '@/components/site-shell'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 import { AboutSection } from '@/components/home/about-section'
 import { ApproachSection } from '@/components/home/approach-section'
 import { ContactSection } from '@/components/home/contact-section'
@@ -12,7 +13,7 @@ import { WhyUsSection } from '@/components/home/why-us-section'
 export default function Page() {
   return (
     <main>
-      <SiteHeader />
+      <Header />
       <HeroSection />
       <TrustStrip />
       <WhyUsSection />
@@ -22,7 +23,7 @@ export default function Page() {
       <ApproachSection />
       <QuoteSection />
       <ContactSection />
-      <SiteFooter />
+      <Footer />
     </main>
   )
 }
