@@ -1013,6 +1013,22 @@ h2 span,
   font-size: .72rem;
 }
 
+.footer-nav-link {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.875rem;
+  transition:
+    color 300ms ease,
+    transform 300ms ease;
+}
+
+.footer-nav-link:hover {
+  color: #ffffff;
+}
+
 .footer-links a:hover {
   color: #fff;
 }

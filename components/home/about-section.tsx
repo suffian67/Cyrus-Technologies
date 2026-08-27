@@ -262,7 +262,7 @@ export function AboutSection() {
               Security expertise
               <br />
 
-              <span className="text-white drop-shadow-[0_2px_18px_rgba(11,77,145,0.12)]">
+              <span className="!text-[#E5E7EB]">
                 with a human edge.
               </span>
             </h2>
