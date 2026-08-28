@@ -19,6 +19,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Reveal } from '@/components/site-interactions'
 import { ContactSection } from '@/components/home/contact-section'
+import Image from 'next/image'
 
 export const metadata = {
     title: 'Incident Response | Cyrus Technologies',
@@ -36,6 +37,33 @@ export default function IncidentResponsePage() {
             ========================================================= */}
 
             <section className="relative overflow-hidden border-b border-[#DCE8F7] bg-[#F7FAFE]">
+
+                {/* Background image */}
+                <div
+                    aria-hidden="true"
+                    className="absolute inset-0"
+                >
+                    <Image
+                        src="/services/incident-response.jpg"
+                        alt=""
+                        fill
+                        priority
+                        className="object-cover object-center"
+                        sizes="100vw"
+                    />
+
+                </div>
+
+                {/* Image treatment */}
+                <div
+                    aria-hidden="true"
+                    className="absolute inset-0 bg-white/75"
+                />
+
+                <div
+                    aria-hidden="true"
+                    className="absolute inset-0 bg-gradient-to-r from-[#F4F8FD]/96 via-[#F4F8FD]/42 to-[#F4F8FD]/15"
+                />
 
                 {/* Ambient light */}
 

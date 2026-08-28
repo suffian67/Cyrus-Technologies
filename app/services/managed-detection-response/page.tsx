@@ -57,7 +57,7 @@ export default function ManagedDetectionResponsePage() {
 
                 <div
                     aria-hidden="true"
-                    className="absolute inset-0 bg-gradient-to-r from-[#F4F8FD]/95 via-[#F4F8FD]/40 to-[#F4F8FD]/15"
+                    className="absolute inset-0 bg-gradient-to-r from-[#F4F8FD]/95 via-[#F4F8FD]/50 to-[#F4F8FD]/5"
                 />
 
                 {/* Technical grid */}

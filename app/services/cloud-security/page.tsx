@@ -41,7 +41,7 @@ export default function CloudSecurityPage() {
                     className="absolute inset-0"
                 >
                     <Image
-                        src="/images/services/cloud-security-hero.jpg"
+                        src="/services/cloud-security.png"
                         alt=""
                         fill
                         priority
@@ -53,12 +53,12 @@ export default function CloudSecurityPage() {
                 {/* Image treatment */}
                 <div
                     aria-hidden="true"
-                    className="absolute inset-0 bg-white/65"
+                    className="absolute inset-0 bg-white/45"
                 />
 
                 <div
                     aria-hidden="true"
-                    className="absolute inset-0 bg-gradient-to-r from-[#F4F8FD]/96 via-[#F4F8FD]/82 to-[#F4F8FD]/35"
+                    className="absolute inset-0 bg-gradient-to-r from-[#F4F8FD]/46 via-[#F4F8FD]/42 to-[#F4F8FD]/15"
                 />
 
                 {/* Technical grid */}
@@ -141,170 +141,7 @@ export default function CloudSecurityPage() {
 
                         {/* RIGHT — CLOUD ARCHITECTURE VISUAL */}
 
-                        <Reveal>
-                            <div className="relative mx-auto w-full max-w-[510px]">
 
-                                <div
-                                    aria-hidden="true"
-                                    className="absolute inset-0 rounded-[2rem] bg-[#56A9FF]/10 blur-3xl"
-                                />
-
-                                <div className="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/90 p-6 shadow-[0_30px_90px_rgba(23,105,232,0.14)] backdrop-blur-xl">
-
-                                    {/* Header */}
-
-                                    <div className="flex items-center justify-between border-b border-[#E2EBF4] pb-5">
-
-                                        <div>
-
-                                            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#8A9CAF]">
-                                                Cyrus Cloud Security
-                                            </p>
-
-                                            <p className="mt-1 text-sm font-semibold text-[#172B45]">
-                                                Environment overview
-                                            </p>
-
-                                        </div>
-
-                                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#1769E8]/[0.07] text-[#1769E8]">
-                                            <Cloud
-                                                size={20}
-                                                strokeWidth={1.5}
-                                            />
-                                        </div>
-
-                                    </div>
-
-
-                                    {/* Architecture */}
-
-                                    <div className="relative my-7 h-[290px] overflow-hidden rounded-2xl bg-[#F4F8FD]">
-
-                                        <div
-                                            aria-hidden="true"
-                                            className="absolute inset-0 opacity-30"
-                                            style={{
-                                                backgroundImage: `
-                                                    linear-gradient(#1769E8 1px, transparent 1px),
-                                                    linear-gradient(90deg, #1769E8 1px, transparent 1px)
-                                                `,
-                                                backgroundSize: '42px 42px',
-                                            }}
-                                        />
-
-                                        {/* connection lines */}
-
-                                        <div className="absolute left-1/2 top-[29%] h-[100px] w-px -translate-x-1/2 bg-[#1769E8]/20" />
-
-                                        <div className="absolute left-[25%] top-[55%] h-px w-[50%] bg-[#1769E8]/20" />
-
-                                        <div className="absolute left-[25%] top-[55%] h-[55px] w-px bg-[#1769E8]/20" />
-
-                                        <div className="absolute left-1/2 top-[55%] h-[55px] w-px -translate-x-1/2 bg-[#1769E8]/20" />
-
-                                        <div className="absolute right-[25%] top-[55%] h-[55px] w-px bg-[#1769E8]/20" />
-
-
-                                        {/* Cloud core */}
-
-                                        <div className="absolute left-1/2 top-[13%] flex h-20 w-20 -translate-x-1/2 items-center justify-center rounded-2xl border border-[#56A9FF]/40 bg-white shadow-[0_15px_40px_rgba(23,105,232,0.12)]">
-
-                                            <Cloud
-                                                size={30}
-                                                strokeWidth={1.3}
-                                                className="text-[#1769E8]"
-                                            />
-
-                                        </div>
-
-
-                                        {/* Infrastructure nodes */}
-
-                                        {[
-                                            {
-                                                icon: Network,
-                                                label: 'Network',
-                                                position: 'left-[12%] top-[58%]',
-                                            },
-                                            {
-                                                icon: LockKeyhole,
-                                                label: 'Identity',
-                                                position: 'left-1/2 top-[58%] -translate-x-1/2',
-                                            },
-                                            {
-                                                icon: Boxes,
-                                                label: 'Workloads',
-                                                position: 'right-[12%] top-[58%]',
-                                            },
-                                        ].map((item) => {
-
-                                            const Icon = item.icon
-
-                                            return (
-                                                <div
-                                                    key={item.label}
-                                                    className={`absolute ${item.position} flex w-24 flex-col items-center gap-2`}
-                                                >
-
-                                                    <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#1769E8]/15 bg-white text-[#1769E8] shadow-sm">
-                                                        <Icon
-                                                            size={18}
-                                                            strokeWidth={1.5}
-                                                        />
-                                                    </div>
-
-                                                    <span className="text-[8px] font-bold uppercase tracking-[0.15em] text-[#71859A]">
-                                                        {item.label}
-                                                    </span>
-
-                                                </div>
-                                            )
-                                        })}
-
-
-                                        {/* Security layer */}
-
-                                        <div className="absolute bottom-[10%] left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full border border-[#56A9FF]/20 bg-white px-4 py-2 shadow-sm">
-
-                                            <ShieldCheck
-                                                size={14}
-                                                className="text-[#1769E8]"
-                                            />
-
-                                            <span className="text-[8px] font-bold uppercase tracking-[0.16em] text-[#52657D]">
-                                                Security controls
-                                            </span>
-
-                                        </div>
-
-                                    </div>
-
-
-                                    {/* Bottom status */}
-
-                                    <div className="flex items-center justify-between">
-
-                                        <div className="flex items-center gap-2">
-
-                                            <span className="h-2 w-2 rounded-full bg-[#56A9FF] shadow-[0_0_12px_rgba(86,169,255,0.7)]" />
-
-                                            <span className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#52657D]">
-                                                Protected architecture
-                                            </span>
-
-                                        </div>
-
-                                        <span className="text-[9px] font-semibold uppercase tracking-[0.12em] text-[#8A9CAF]">
-                                            Visibility · Control · Resilience
-                                        </span>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </Reveal>
 
                     </div>
 

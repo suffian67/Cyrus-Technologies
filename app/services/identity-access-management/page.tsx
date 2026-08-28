@@ -17,6 +17,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Reveal } from '@/components/site-interactions'
 import { ContactSection } from '@/components/home/contact-section'
+import Image from 'next/image'
 
 export const metadata = {
     title: 'Identity & Access Management | Cyrus Technologies',
@@ -34,6 +35,32 @@ export default function IdentityAccessManagementPage() {
             ========================================================= */}
 
             <section className="relative overflow-hidden border-b border-[#DCE8F7] bg-[#F7FAFE]">
+
+                {/* Background image */}
+                <div
+                    aria-hidden="true"
+                    className="absolute inset-0"
+                >
+                    <Image
+                        src="/services/identity-access.jpg"
+                        alt=""
+                        fill
+                        priority
+                        className="object-cover object-center"
+                        sizes="100vw"
+                    />
+                </div>
+
+                {/* Image treatment */}
+                <div
+                    aria-hidden="true"
+                    className="absolute inset-0 bg-white/45"
+                />
+
+                <div
+                    aria-hidden="true"
+                    className="absolute inset-0 bg-gradient-to-r from-[#F4F8FD]/96 via-[#F4F8FD]/42 to-[#F4F8FD]/15"
+                />
 
                 {/* Soft architectural background */}
                 <div
@@ -128,149 +155,7 @@ export default function IdentityAccessManagementPage() {
 
                         {/* IDENTITY VISUAL */}
 
-                        <Reveal>
 
-                            <div className="relative mx-auto w-full max-w-[500px]">
-
-                                {/* Glow */}
-
-                                <div
-                                    aria-hidden="true"
-                                    className="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#56A9FF]/10 blur-[80px]"
-                                />
-
-                                <div className="relative h-[480px]">
-
-                                    {/* Outer rings */}
-
-                                    <div
-                                        aria-hidden="true"
-                                        className="absolute left-1/2 top-1/2 h-[380px] w-[380px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#1769E8]/10"
-                                    />
-
-                                    <div
-                                        aria-hidden="true"
-                                        className="absolute left-1/2 top-1/2 h-[290px] w-[290px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#1769E8]/15"
-                                    />
-
-                                    <div
-                                        aria-hidden="true"
-                                        className="absolute left-1/2 top-1/2 h-[190px] w-[190px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#56A9FF]/25"
-                                    />
-
-
-                                    {/* Connection lines */}
-
-                                    <div
-                                        aria-hidden="true"
-                                        className="absolute left-[15%] right-[15%] top-1/2 h-px bg-gradient-to-r from-transparent via-[#1769E8]/20 to-transparent"
-                                    />
-
-                                    <div
-                                        aria-hidden="true"
-                                        className="absolute bottom-[15%] left-1/2 top-[15%] w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-[#1769E8]/20 to-transparent"
-                                    />
-
-                                    {/* Central identity */}
-
-                                    <div className="absolute left-1/2 top-1/2 flex h-[112px] w-[112px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#56A9FF]/40 bg-white shadow-[0_25px_70px_rgba(23,105,232,0.16)]">
-
-                                        <div className="flex h-[76px] w-[76px] items-center justify-center rounded-full bg-[#1769E8]/[0.07] text-[#1769E8]">
-
-                                            <Fingerprint
-                                                size={38}
-                                                strokeWidth={1.25}
-                                            />
-
-                                        </div>
-
-                                    </div>
-
-
-                                    {/* Top node */}
-
-                                    <div className="absolute left-1/2 top-[4%] flex -translate-x-1/2 flex-col items-center gap-2">
-
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#D5E3F0] bg-white text-[#1769E8] shadow-sm">
-
-                                            <Users
-                                                size={20}
-                                                strokeWidth={1.5}
-                                            />
-
-                                        </div>
-
-                                        <span className="text-[8px] font-bold uppercase tracking-[0.16em] text-[#71859A]">
-                                            People
-                                        </span>
-
-                                    </div>
-
-
-                                    {/* Right node */}
-
-                                    <div className="absolute right-[2%] top-1/2 flex -translate-y-1/2 flex-col items-center gap-2">
-
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#D5E3F0] bg-white text-[#1769E8] shadow-sm">
-
-                                            <Network
-                                                size={20}
-                                                strokeWidth={1.5}
-                                            />
-
-                                        </div>
-
-                                        <span className="text-[8px] font-bold uppercase tracking-[0.16em] text-[#71859A]">
-                                            Systems
-                                        </span>
-
-                                    </div>
-
-
-                                    {/* Bottom node */}
-
-                                    <div className="absolute bottom-[4%] left-1/2 flex -translate-x-1/2 flex-col items-center gap-2">
-
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#D5E3F0] bg-white text-[#1769E8] shadow-sm">
-
-                                            <KeyRound
-                                                size={20}
-                                                strokeWidth={1.5}
-                                            />
-
-                                        </div>
-
-                                        <span className="text-[8px] font-bold uppercase tracking-[0.16em] text-[#71859A]">
-                                            Privilege
-                                        </span>
-
-                                    </div>
-
-
-                                    {/* Left node */}
-
-                                    <div className="absolute left-[2%] top-1/2 flex -translate-y-1/2 flex-col items-center gap-2">
-
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#D5E3F0] bg-white text-[#1769E8] shadow-sm">
-
-                                            <LockKeyhole
-                                                size={20}
-                                                strokeWidth={1.5}
-                                            />
-
-                                        </div>
-
-                                        <span className="text-[8px] font-bold uppercase tracking-[0.16em] text-[#71859A]">
-                                            Policy
-                                        </span>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </Reveal>
 
                     </div>
 
@@ -849,7 +734,7 @@ export default function IdentityAccessManagementPage() {
                 </div>
 
             </section>
-                <ContactSection />
+            <ContactSection />
             <Footer />
         </main>
     )
